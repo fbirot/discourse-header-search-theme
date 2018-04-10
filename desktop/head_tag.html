@@ -116,17 +116,15 @@ api.reopenWidget('search-menu', {
     let showHeaderResults = this.state.showHeaderResults == null || this.state.showHeaderResults === true;
     let contents = [];
 
-    contents = contents.concat(...corePanelContents.call(this));
-
     if (formFactor === 'header') {
-      contents = contents.concat(this.attach('button', {
+      contents.push(this.attach('button', {
           icon: 'search',
           className: 'search-icon',
           action: 'showResults'
       }));
     }
 
-    
+    contents = contents.concat(...corePanelContents.call(this));
 
     if (formFactor === 'menu' || showHeaderResults) {
       return contents;
