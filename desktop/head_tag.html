@@ -130,7 +130,7 @@ api.reopenWidget('search-menu', {
       return contents;
     } else {
       Ember.run.scheduleOnce('afterRender', this, () => {
-        $('#search-term').val('');
+        /*$('#search-term').val('');*/
       })
 
       return contents.filter((widget) => {
