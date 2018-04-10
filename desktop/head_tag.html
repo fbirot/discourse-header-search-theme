@@ -116,7 +116,7 @@ api.reopenWidget('search-menu', {
     let showHeaderResults = this.state.showHeaderResults == null || this.state.showHeaderResults === true;
     let contents = [];
 
-    contents = contents.push(...corePanelContents.call(this));
+    contents = contents.push(corePanelContents.call(this));
 
     if (formFactor === 'header') {
       contents.push(this.attach('button', {
@@ -125,6 +125,7 @@ api.reopenWidget('search-menu', {
           action: 'showResults'
       }));
     }
+
     
 
     if (formFactor === 'menu' || showHeaderResults) {
