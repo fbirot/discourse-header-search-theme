@@ -119,7 +119,7 @@ api.reopenWidget('search-menu', {
     contents = contents.concat(...corePanelContents.call(this));
 
     if (formFactor === 'header') {
-      contents.push(this.attach('button', {
+      contents = contents.concat(this.attach('button', {
           icon: 'search',
           className: 'search-icon',
           action: 'showResults'
